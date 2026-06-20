@@ -1,0 +1,167 @@
+<style>
+/* ═══════════════════════════════════════════════════════════
+   Thème "Maghreb Steel" — rouge industriel / gris acier
+   Police titres : Oswald (condensée, industrielle)
+   Police texte  : Inter
+   ═══════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  --ms-red:        #C8102E;
+  --ms-red-dark:    #8F0B20;
+  --ms-grey-950:    #15171A;
+  --ms-grey-900:    #1B1E22;
+  --ms-grey-800:    #24272C;
+  --ms-grey-700:    #343840;
+  --ms-grey-500:    #6B7178;
+  --ms-grey-300:    #A9ADB3;
+  --ms-white:       #F2F3F4;
+}
+
+html, body, [class*="css"]{
+  font-family: 'Inter', sans-serif;
+}
+
+/* Fond général de l'application */
+.stApp{
+  background: linear-gradient(180deg, var(--ms-grey-950) 0%, var(--ms-grey-900) 100%);
+  color: var(--ms-white);
+}
+
+/* Barre latérale */
+section[data-testid="stSidebar"]{
+  background: var(--ms-grey-950);
+  border-right: 3px solid var(--ms-red);
+}
+section[data-testid="stSidebar"] *{
+  color: var(--ms-white) !important;
+}
+
+/* Titres */
+h1, h2, h3{
+  font-family: 'Oswald', sans-serif !important;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--ms-white) !important;
+}
+h1{ border-bottom: 3px solid var(--ms-red); padding-bottom: 0.3rem; }
+
+/* Boutons */
+.stButton > button{
+  background: var(--ms-red);
+  color: var(--ms-white);
+  border: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.15s ease;
+}
+.stButton > button:hover{
+  background: var(--ms-red-dark);
+  color: var(--ms-white);
+}
+
+/* Onglets */
+button[data-testid="stTab"]{
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+div[data-baseweb="tab-highlight"]{
+  background-color: var(--ms-red) !important;
+}
+
+/* Tableaux */
+div[data-testid="stDataFrame"]{
+  border: 1px solid var(--ms-grey-700);
+  border-radius: 6px;
+}
+
+/* Séparateurs */
+hr{ border-color: var(--ms-grey-700); }
+
+/* ── Bandeau d'en-tête de page ───────────────────────────── */
+.page-header{
+  display: flex;
+  align-items: stretch;
+  gap: 14px;
+  margin-bottom: 1.4rem;
+}
+.page-header-bar{
+  width: 6px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, var(--ms-red) 0%, var(--ms-red-dark) 100%);
+}
+.page-header-text h1{
+  margin: 0;
+  font-size: 1.6rem;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.page-header-text p{
+  margin: 2px 0 0 0;
+  color: var(--ms-grey-300);
+  font-size: 0.92rem;
+}
+
+/* ── Cartes KPI ──────────────────────────────────────────── */
+.kpi-row{
+  display: flex;
+  gap: 14px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.kpi-card{
+  flex: 1 1 180px;
+  background: var(--ms-grey-800);
+  border: 1px solid var(--ms-grey-700);
+  border-left: 4px solid var(--ms-grey-500);
+  border-radius: 6px;
+  padding: 14px 16px;
+  min-width: 160px;
+}
+.kpi-card.kpi-pos{ border-left-color: #3FA66A; }
+.kpi-card.kpi-neg{ border-left-color: var(--ms-red); }
+.kpi-card.kpi-neutral{ border-left-color: var(--ms-grey-500); }
+.kpi-label{
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ms-grey-300);
+  margin-bottom: 6px;
+}
+.kpi-value{
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: var(--ms-white);
+  line-height: 1.1;
+}
+.kpi-delta{
+  font-size: 0.8rem;
+  color: var(--ms-grey-300);
+  margin-top: 4px;
+}
+
+/* ── Bloc marque (sidebar) ──────────────────────────────────*/
+.ms-brand{
+  display:flex; align-items:center; gap:10px;
+  padding: 4px 0 10px 0;
+}
+.ms-brand-bar{
+  width: 5px; height: 34px; border-radius: 3px;
+  background: var(--ms-red);
+}
+.ms-brand-title{
+  font-family:'Oswald', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--ms-white);
+  line-height: 1.1;
+}
+.ms-brand-sub{
+  font-size: 0.72rem;
+  color: var(--ms-grey-300);
+}
+</style>
